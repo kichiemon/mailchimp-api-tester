@@ -89,7 +89,7 @@ export async function POST(req: NextRequest) {
           result = await handleMailchimpRequest(`${baseUrl}/lists/${body.listId}/segments`, { method, headers });
         } else if (method === 'POST') {
           console.log(`Creating segment for list: ${body.listId}`);
-          let segmentData: any = {
+          const segmentData: any = {
             name: body.segmentName,
           };
 
